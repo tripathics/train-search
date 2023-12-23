@@ -7,6 +7,8 @@
 
 ## How to run
 - Clone the project
+- Download Chrome and ChromeDriver for your operating system from [here](https://googlechromelabs.github.io/chrome-for-testing/)
+- Extract the ChromeDriver and set the `CHROME_DRIVER_PATH` environment variable to the path of the ChromeDriver.
 - Run the `trainsearch.jar` file with java
 
 ```bash

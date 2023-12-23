@@ -17,7 +17,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "/home/shyam/Downloads/chromedriver-linux64/chromedriver");
+        // configure chromedriver---
+        // check the path of chromedriver in environment variables
+        String chromeDriverPath = System.getenv("CHROME_DRIVER_PATH");
+        if (chromeDriverPath == null) {
+            System.out.println("Please set the CHROME_DRIVER_PATH environment variable");
+            return;
+        }
+        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         WebDriver driver = new ChromeDriver();
 
         // input from user
